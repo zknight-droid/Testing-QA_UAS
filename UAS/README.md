@@ -31,16 +31,14 @@ run `flask create`to create tables from models.
 
 ## Insert data product
 
-run this query from your db client
+run this query from your db client, in this case I'm using dbeaver
 ```
-INSERT INTO public.product (sku,brand,"name",description,price,non_discountable) VALUES
-	 ('ABCKM5','ABC','kecap manis ABC 500ml','kecap manis abc 500ml',25000.0,false),
-	 ('INDOSKM25','Indofood','Susu kental manis 250ml','Susu kental manis 250ml',15000.0,false),
-	 ('LIOML1','Lion','Mamalemon 1000ml ','Mamalemon 1000ml ',21000.0,false),
-	 ('INDOBR','Indofood','Bumbu racik','Bumbu racik',2500.0,false),
-	 ('ABCS25','ABC','Sambal 250ml','Sambal 250ml',15000.0,false),
-	 ('INDOIGS','Indofood','Indomie goreng special','Indomie goreng special',3000.0,false),
-	 ('MYRLM1','mayora','le minerale 1000ml','le minerale 1000ml',8000.0,true);
+INSERT INTO public.product (sku, brand, "name", description, price, non_discountable) VALUES
+    ('ABCD123', 'ABC Corporation', 'ABC Tea Bags', 'Premium tea bags', 15000.0, false),
+    ('XYZ789', 'XYZ Foods', 'XYZ Instant Noodles', 'Delicious instant noodles', 5000.0, false),
+    ('MNO456', 'MNO Drinks', 'MNO Sparkling Water', 'Refreshing sparkling water', 10000.0, true),
+    ('PQR321', 'PQR Snacks', 'PQR Potato Chips', 'Crunchy potato chips', 8000.0, false);
+
 ```
 
 ## Run the app
@@ -60,13 +58,3 @@ check test coverage
 
     pytest --cov=api test/
 
-
-## Tugas UAS 
-
-lengkapi function test berikut untuk meng-cover get cart api
-
-https://github.com/hako-975/TESTING_QA/blob/master/UAS/test/test_routes.py#L27-L50
-
-dan untuk create factory ditambahkan jg data untuk model cart
-
-https://github.com/hako-975/TESTING_QA/blob/master/UAS/test/test_models.py#L35-L74
